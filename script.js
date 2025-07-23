@@ -87,13 +87,16 @@ loopBtn.addEventListener("click", () => {
 audioElement.addEventListener("ended", () => {
   if (isLooping) {
     playSongByIndex(songIndex);
-  } else if (isShuffling) {
+  }
+   else if (isShuffling) {
     let randomIndex = Math.floor(Math.random() * songs.length);
     while (randomIndex === songIndex) {
     randomIndex = Math.floor(Math.random() * songs.length);
 }
-  } else {
+  
+} else {
     if (songIndex < songs.length - 1) {
+
       playSongByIndex(songIndex + 1);
     } else {
       
@@ -113,10 +116,12 @@ nextBtn.addEventListener("click", () => {
       randomIndex = Math.floor(Math.random() * songs.length);
     } while (randomIndex === songIndex);
     playSongByIndex(randomIndex);
-  } else {
+  }
+   else {
     if (songIndex < songs.length - 1) {
       playSongByIndex(songIndex + 1);
-    } else {
+    }
+     else {
       playSongByIndex(0);
     }
   }
